@@ -16,6 +16,9 @@ public class Word {
     // Integer value
     private int mImageResourceId = NO_IMAGE;
 
+    // Integer value
+    private int mAudioResourceId;
+
     // String value
     private String mDefaultWord;
 
@@ -23,10 +26,12 @@ public class Word {
     private String mMiwokWord;
 
 
+
     /**
      * Constructs a new object with default and miwok versions of each word
      */
-    public Word(String DefaultWord, String MiwokWord) {
+    public Word(int AudioResourceId, String DefaultWord, String MiwokWord) {
+        mAudioResourceId = AudioResourceId;
         mDefaultWord = DefaultWord;
         mMiwokWord = MiwokWord;
     }
@@ -35,8 +40,9 @@ public class Word {
     /**
      * Constructs a new object with default and miwok versions of each word
      */
-    public Word(int ImageResourceId, String DefaultWord, String MiwokWord) {
+    public Word(int ImageResourceId, int AudioResourceId, String DefaultWord, String MiwokWord) {
         mImageResourceId = ImageResourceId;
+        mAudioResourceId = AudioResourceId;
         mDefaultWord = DefaultWord;
         mMiwokWord = MiwokWord;
     }
@@ -44,6 +50,11 @@ public class Word {
     // Get the image resource ID
     public int getImageResourceId() {
         return mImageResourceId;
+    }
+
+    // Get the image resource ID
+    public int getAudioResourceId() {
+        return mAudioResourceId;
     }
 
     //get the default version of the word
