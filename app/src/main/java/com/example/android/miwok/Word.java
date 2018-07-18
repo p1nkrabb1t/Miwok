@@ -26,7 +26,6 @@ public class Word {
     private String mMiwokWord;
 
 
-
     /**
      * Constructs a new object with default and miwok versions of each word
      */
@@ -67,7 +66,7 @@ public class Word {
         return mMiwokWord;
     }
 
-    public boolean imageAvailable(){
+    public boolean imageAvailable() {
         return getImageResourceId() != NO_IMAGE;
     }
 
